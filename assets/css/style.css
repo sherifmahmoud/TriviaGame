@@ -21,6 +21,7 @@ header{
     background-color: darkslategrey;
     color: white;
     border-radius: 10px;
+    margin-bottom: 5px;
 
 }
 header>h1{
@@ -44,8 +45,18 @@ header>h1{
     font-weight: bold;
 }
 #timer{
-   background-color: darkolivegreen;
+   background-color: #556b2f;
     color: white;
+}
+#timer>h1{
+    width:500px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+     margin-left: auto;
+    margin-right: auto;
 }
 .middle{
     width: 600px;
