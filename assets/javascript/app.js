@@ -57,6 +57,9 @@ $(document).ready(function () {
     game.resetGame();
     var questionTimer;//to countdown time remaining for a question
     $('#start').click(function () {
+        if (typeof (questionTimer) !== 'undefined') {
+            clearInterval(questionTimer);
+        }
         game.secondsRemaining = game.secondsPerQuestion;
         updateDisplayTimer();//update the page with remaining seconds
         //Display the question and multiple choices
