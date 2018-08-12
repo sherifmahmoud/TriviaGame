@@ -1,0 +1,107 @@
+body{
+    background-image: url('../images/Black-and-White-Cinema-Backgrounds.jpg');
+}
+.container{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#options{
+   background-color: darkslategray;
+}
+#options>h2{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Courgette', cursive;
+    color: aqua;
+}
+header{
+    height: 50px;
+    background-color: darkslategrey;
+    color: white;
+    border-radius: 10px;
+
+}
+header>h1{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Courgette', cursive;
+}
+#time{
+    width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+}
+#time>label{
+    font-weight: bold;
+}
+#timer{
+   background-color: darkolivegreen;
+    color: white;
+}
+.middle{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.round{
+    border-radius: 10px;
+}
+#answers_row{
+    background-color: darkslategrey;
+    height: 160px;
+}
+img{
+    width:150px;
+    height:150px;
+}
+#question_div{
+    height: 100px;
+    background-color: red;
+    color: white;
+    margin-bottom: 10px;
+    font-family: 'Courgette', cursive;
+}
+#question_div>p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#choices_div{
+    float:left;
+    width: 300px;
+    height:150px;
+    background-color: blueviolet;
+}
+#image_div{
+    width:150px;
+    height:150px;
+    float: left;
+}
+#result_div{
+    background-color: black;
+    color: greenyellow;
+}
+ul>li{
+    background-color: green;
+    border-radius: 5px;
+    margin: 5px;
+    color: yellow;
+    text-align: center;
+
+}
