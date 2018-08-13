@@ -68,6 +68,7 @@ $(document).ready(function () {
         var secondsRemaining = game.secondsPerQuestion;
         //start seconds Countdown  
         questionTimer = setInterval(timerHandler, 1000);
+        $('#start').prop("disabled", true);
     });//end $('#start').click
 
     $('li').click(function (e) {
@@ -78,6 +79,7 @@ $(document).ready(function () {
             game.numCorrectAnswers++;
             //display Correct answer feedback
             displayCorrectFeedback(true);
+            updateResultsDisplay();
         } else {
             game.numWrongAnswers++;
             displayCorrectFeedback(false);
@@ -85,8 +87,6 @@ $(document).ready(function () {
         game.secondsRemaining = game.secondsPerQuestion;
         moveToNextQuestion();
         updateDisplayTimer();
-        updateResultsDisplay();
-
     });//end $(li).click
     function moveToNextQuestion() {
         //clear the timer
@@ -105,8 +105,11 @@ $(document).ready(function () {
             //show the results to the user
             updateResultsDisplay();
             //reset game
+            $('#question').text('Click Start to Begin..');
+            $('li').hide();
             game.resetGame();
-            //redisplay the settings panel &the start button
+            //redisplay the start button
+            $('#start').prop("disabled", false);
         }
     }
     function updateDisplayTimer() {//update the page with remaining seconds
@@ -120,6 +123,7 @@ $(document).ready(function () {
         $('#ans2').html(game.questions[game.currentQuestion].shuffledAnswers[1]);
         $('#ans3').html(game.questions[game.currentQuestion].shuffledAnswers[2]);
         $('#ans4').html(game.questions[game.currentQuestion].shuffledAnswers[3]);
+        $('li').show();
     }
     function updateResultsDisplay() {
         $('#correct_ans').text("" + game.numCorrectAnswers);
